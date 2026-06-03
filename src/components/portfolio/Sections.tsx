@@ -66,6 +66,14 @@ export function Hero() {
           >
             Contact Me
           </a>
+          <a
+            href={resumeAsset.url}
+            download
+            className="inline-flex items-center gap-2 rounded-md border border-primary/60 bg-primary/10 px-6 py-3 text-sm font-semibold text-primary transition-colors hover:bg-primary hover:text-primary-foreground"
+          >
+            <FileDown className="h-4 w-4" />
+            Resume
+          </a>
         </div>
       </div>
     </section>
