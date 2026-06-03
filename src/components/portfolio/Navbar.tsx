@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
-import { Code2 } from "lucide-react";
+import { Code2, FileDown } from "lucide-react";
+import resumeAsset from "@/assets/Indrajeet_Kumar_Resume.pdf.asset.json";
 
 const links = [
   { href: "#about", label: "About" },
@@ -33,15 +34,25 @@ export function Navbar() {
           <Code2 className="h-5 w-5 text-primary" />
           <span>indrajeet<span className="text-primary">.</span>in</span>
         </a>
-        <ul className="hidden md:flex items-center gap-7 text-sm text-muted-foreground">
-          {links.map((l) => (
-            <li key={l.href}>
-              <a href={l.href} className="hover:text-primary transition-colors story-link">
-                {l.label}
-              </a>
-            </li>
-          ))}
-        </ul>
+        <div className="hidden md:flex items-center gap-7">
+          <ul className="flex items-center gap-7 text-sm text-muted-foreground">
+            {links.map((l) => (
+              <li key={l.href}>
+                <a href={l.href} className="hover:text-primary transition-colors story-link">
+                  {l.label}
+                </a>
+              </li>
+            ))}
+          </ul>
+          <a
+            href={resumeAsset.url}
+            download
+            className="inline-flex items-center gap-1.5 rounded-md border border-primary/60 bg-primary/10 px-3 py-1.5 text-sm font-medium text-primary transition-colors hover:bg-primary hover:text-primary-foreground"
+          >
+            <FileDown className="h-3.5 w-3.5" />
+            Resume
+          </a>
+        </div>
         <button
           className="md:hidden text-muted-foreground"
           onClick={() => setOpen((o) => !o)}
@@ -67,6 +78,17 @@ export function Navbar() {
               </a>
             </li>
           ))}
+          <li>
+            <a
+              href={resumeAsset.url}
+              download
+              onClick={() => setOpen(false)}
+              className="inline-flex items-center gap-1.5 text-primary hover:text-primary-glow"
+            >
+              <FileDown className="h-3.5 w-3.5" />
+              Download Resume
+            </a>
+          </li>
         </ul>
       )}
     </header>

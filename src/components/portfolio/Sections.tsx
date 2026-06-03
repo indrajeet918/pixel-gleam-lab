@@ -16,7 +16,9 @@ import {
   Server,
   Code,
   Wrench,
+  FileDown,
 } from "lucide-react";
+import resumeAsset from "@/assets/Indrajeet_Kumar_Resume.pdf.asset.json";
 
 export function Hero() {
   return (
@@ -63,6 +65,14 @@ export function Hero() {
             className="inline-flex items-center gap-2 rounded-md border border-border bg-card/50 px-6 py-3 text-sm font-semibold text-foreground transition-colors hover:border-primary hover:text-primary"
           >
             Contact Me
+          </a>
+          <a
+            href={resumeAsset.url}
+            download
+            className="inline-flex items-center gap-2 rounded-md border border-primary/60 bg-primary/10 px-6 py-3 text-sm font-semibold text-primary transition-colors hover:bg-primary hover:text-primary-foreground"
+          >
+            <FileDown className="h-4 w-4" />
+            Resume
           </a>
         </div>
       </div>
