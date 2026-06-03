@@ -16,7 +16,9 @@ import {
   Server,
   Code,
   Wrench,
+  FileDown,
 } from "lucide-react";
+import resumeAsset from "@/assets/Indrajeet_Kumar_Resume.pdf.asset.json";
 
 export function Hero() {
   return (

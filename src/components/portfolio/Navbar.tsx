@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
-import { Code2 } from "lucide-react";
+import { Code2, FileDown } from "lucide-react";
+import resumeAsset from "@/assets/Indrajeet_Kumar_Resume.pdf.asset.json";
 
 const links = [
   { href: "#about", label: "About" },
